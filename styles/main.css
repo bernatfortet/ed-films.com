@@ -354,18 +354,19 @@ html {
   max-width: 960px;
   margin: 0 auto;
 }
+.featured .poster {
+  -webkit-box-shadow: 0 0 20px 0 black;
+  -moz-box-shadow: 0 0 20px 0 black;
+  box-shadow: 0 0 20px 0 black;
+  margin-right: 32px;
+}
 .featured .film-title {
   font-size: 36px;
   line-height: 1;
   letter-spacing: 0;
   font-weight: bold;
   font-weight: 600;
-}
-.featured .poster {
-  -webkit-box-shadow: 0 0 20px 0 black;
-  -moz-box-shadow: 0 0 20px 0 black;
-  box-shadow: 0 0 20px 0 black;
-  margin-right: 32px;
+  margin: 8px 0 12px;
 }
 .featured .desc {
   max-width: 360px;
@@ -379,6 +380,7 @@ html {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(60));
   filter: alpha(opacity = (60));
   opacity: 0.6;
+  margin: 0 0 12px 0;
 }
 .featured .ratings .title {
   line-height: 1;
@@ -410,6 +412,7 @@ html {
   letter-spacing: 0;
   font-weight: bold;
   font-weight: 600;
+  margin: 30px 0 12px 0;
 }
 .featured .meta .time,
 .featured .meta .location {
@@ -423,6 +426,12 @@ html {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(60));
   filter: alpha(opacity = (60));
   opacity: 0.6;
+}
+.featured .meta .location {
+  margin-bottom: 16px;
+}
+.featured .meta .button {
+  margin-bottom: 20px;
 }
 .play-icon {
   width: 36px;
@@ -540,6 +549,7 @@ html {
 }
 .subscribe input {
   margin-right: 24px;
+  min-width: 200px;
   padding: 15px 22px;
   font-size: 18px;
   line-height: 1;
@@ -549,6 +559,7 @@ html {
   -webkit-border-radius: 3px;
   border: 0;
   background-color: #f2f2f2;
+  text-align: center;
 }
 section {
   margin: 36px 0;
@@ -627,7 +638,7 @@ footer a:hover {
 }
 .button {
   padding: 15px 22px;
-  background: #00CE4B;
+  background: #00CE4B !important;
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -638,10 +649,12 @@ footer a:hover {
   font-weight: bold;
   font-weight: 600;
   text-transform: uppercase;
+  text-decoration: none;
+  color: white;
 }
 .black-button {
-  background: #2B2A27;
-  color: white;
+  background: #2B2A27 !important;
+  color: white !important;
 }
 h3 {
   text-align: center;
