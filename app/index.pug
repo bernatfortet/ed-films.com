@@ -17,36 +17,34 @@ html(lange="en")
 				h1.logo Ed Films
 			.featured
 				.row
-					.col-xs-4
-						.poster(style="background-image:url('http://www.newyorkerfilms.com/administrator/movie_posters/1312219817To_Be_and_to_have_poster_1.jpg')")
-					.col-xs-4
+					.poster(style="background-image:url('http://www.newyorkerfilms.com/administrator/movie_posters/1312219817To_Be_and_to_have_poster_1.jpg')")
+					.column
 						.bold.faded60.upcase Next Screening
 						.film-title To Be and To Have
 						p.desc In rural France, schoolteacher Georges Lopez educates 12 children, whose ages range from 4 to 11 years old. Over the course of a year, the soon-to-retire Lopez instructs them all in one small classroom with the traditional tools of French teaching: rote repetition and the dictation of literary passages for copying. As the seasons pass, Lopez must keep his students disciplined while preparing the older children for the exams that will determine their educational future.
-						.ratings
-							.imdb
-								.title IMDB
+						.ratings.row.space-around
+							.imdb.center.flex.column
 								.value 7.9
-								.stars
-							.rotten-tomatoes
-								.title Rotten tomatoes
+								.title IMDb
+							.rotten-tomatoes.center.flex.column
 								.value 97%
-								.freshness(style="background-position:0 0;")
+								.title Rotten Tomatoes
+					.flex1
 					.meta.col-xs-4.col-sm-12
 						.row
 						.date June 1st
 						.time 7-9PM
 						.location @Roxie Theater
-						.button.green Get Tickets
-						.play-trailer
+						a.button.green(href="https://www.eventbrite.com/edit?eid=25277609009", title='Get Tickets for To Be and To Have', target="_blank") Get Tickets
+						.play-trailer.row.center#openVideoModal
 							.play-icon
 								.triangle
-							span Play trailer
+							span.h2 Play trailer
 
 
-		.screenings
+		section.screenings
 			h3 All Screenings
-			.row
+			.row.space-around
 				.film
 					.poster(style="background-image:url('https://www.whalingmuseum.org/sites/default/files/images/Programs/most-likely-to-succeed_poster.jpg')")
 					.title Most likely to Scuceed
@@ -55,13 +53,29 @@ html(lange="en")
 					.poster(style="background-image:url('http://www.newyorkerfilms.com/administrator/movie_posters/1312219817To_Be_and_to_have_poster_1.jpg')")
 					.title To Be and To Have
 					.date June 1, 2016
+				.film.add-film
+					.poster
+						.plus +
+						span Recommend a Screening
+				.film
 
-		.subscribe.flex.center.column
-			.row
-				h3 Keep me posted with new screenings
-			.row.space-between
-				input(placeholder="you@mail.com")
-				.button.black-button Subscribe
+		section.subscribe.flex.center.column
+			h3 Keep me posted with new screenings
+
+			form.row.space-between(action='http://bernatfortet.us7.list-manage.com/subscribe/post', method='POST')
+				input(type='hidden', name='u', value='85fa9b289574f17996df3126d')
+				input(type='hidden', name='id', value='ce7a2cbff2')
+
+				input(placeholder="you@mail.com", name='MERGE0')
+				input.button.black-button.flex.center(type='submit', value="Subscribe")
+
+
+
+
+		footer
+			h3 Get In touch
+			h2
+				a(href="mailto:contact@ed-films.com", title='Contact Ed Films', target="_blank") contact@ed-films.com
 
 		#Scripts
 			script( src="scripts/lib/jquery.min.js" )
