@@ -4,7 +4,7 @@
   $(document).ready(function() {
     var hash;
     hash = window.location.hash;
-    if (hash = 'subscribed') {
+    if (hash === '#subscribed') {
       return showSubscribedAlert();
     }
   });
