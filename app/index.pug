@@ -1,3 +1,4 @@
+
 doctype html
 html(lange="en")
 
@@ -13,8 +14,8 @@ html(lange="en")
 	body.home
 		.top(style="background-image:url('http://www.newyorkerfilms.com/administrator/movie_images/1312219817To_Be_07.jpg'); ")
 			.scrim
-			//.header
-				h1.logo Ed Films
+			.header
+				.logo Ed Films
 			.featured
 				.row
 					.poster(style="background-image:url('http://www.newyorkerfilms.com/administrator/movie_posters/1312219817To_Be_and_to_have_poster_1.jpg')")
@@ -35,8 +36,8 @@ html(lange="en")
 						.date June 1st
 						.time 7-9PM
 						.location @Roxie Theater
-						a.button.green(href="https://www.eventbrite.com/edit?eid=25277609009", title='Get Tickets for To Be and To Have', target="_blank") Get Tickets
-						.play-trailer.row.center#openVideoModal
+						a.button.green(href="https://www.eventbrite.com/e/to-be-and-to-have-education-documentary-screening-tickets-25277609009", title='Get Tickets for To Be and To Have', target="_blank") Get Tickets
+						.play-trailer.row.center.openVideoModal
 							.play-icon
 								.triangle
 							span.h2 Play trailer
@@ -45,15 +46,15 @@ html(lange="en")
 		section.screenings
 			h3 All Screenings
 			.row.space-around
-				.film
+				a.film(href="https://www.eventbrite.com/e/most-likely-to-succeed-film-screening-tickets-19941746300", title='"Most Likely to Succeed" — Education Documentary Screening')
 					.poster(style="background-image:url('https://www.whalingmuseum.org/sites/default/files/images/Programs/most-likely-to-succeed_poster.jpg')")
 					.title Most likely to Scuceed
 					.date May 12, 2016
-				.film
+				a.film(href="https://www.eventbrite.com/e/to-be-and-to-have-education-documentary-screening-tickets-25277609009", title='"To Be and to Have" — Education Documentary Screening')
 					.poster(style="background-image:url('http://www.newyorkerfilms.com/administrator/movie_posters/1312219817To_Be_and_to_have_poster_1.jpg')")
 					.title To Be and To Have
 					.date June 1, 2016
-				.film.add-film
+				a.film.add-film(href="mailto:contact@ed-films.com?subject=Education Screening Recommendation", title="Rcommend us a screening")
 					.poster
 						.plus +
 						span Recommend a Screening

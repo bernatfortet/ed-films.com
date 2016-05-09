@@ -1,13 +1,23 @@
 @import "style-global.less";
-//@import "flexboxgrid.min.css";
 @import "fonts.less";
 
 body, html{ margin:0; padding:0; .brandon; color:@black }
-.container{ max-width:960px; margin:0 auto; }
 
-.top{ padding:20px 0 60px; background-size:cover; background-repeat:no-repeat; .rel; color: white; .textOnImage; }
+
+//Structure
+.container{ max-width:820px; margin:0 auto; }
+
+
+
+.top{ padding:0 0 60px; background-size:cover; background-repeat:no-repeat; .rel; color: white; .textOnImage; }
+
 	.scrim{ .cover-all; background:fade(black,60%); }
+
+	// Header
 	.header{ .rel; }
+		.logo{ width:86px; height:41px; padding:16px 20px; background:url('../images/logo.svg') no-repeat center center; text-indent:-9999px; }
+
+	//Featured Movie
 	.featured{ .rel; .container;
 		.poster{ .bs(0 0 20px 0 black); margin-right:32px; }
 		.film-title{ .h1; margin:8px 0 12px; }
@@ -22,17 +32,21 @@ body, html{ margin:0; padding:0; .brandon; color:@black }
 			.date{ .h1; margin:30px 0 12px 0; }
 			.time, .location{ .h3; }
 			.location{ margin-bottom:16px; }
-			.button{ margin-bottom:20px; }
+			.button{ margin-bottom:20px; .ts(none); }
 		}
 	}
 
-.play-icon{ @size:36px; width:@size; height:@size; background:fade(white, 20%); border:2px solid white; .br(50%); justify-content:center; align-items:center; .flex; margin-right:8px;
-	.triangle{ @height:@size/4-2; @width:@size/3; width:0; height:0; border-top:@height solid transparent; border-bottom: @height solid transparent; border-left: @width solid white; .rel; left:1px; }
-}
 
-
+//screenings
 .screenings{ .container;
 	h3{ color:black; }
+
+	.film{ width:181px; .tcenter; .fs(20px); .bold; 
+		.poster{ width:181px; height:270px; margin-bottom:8px;}
+		.title{  .h2; text-transform:inherit; }
+		.date{ .h3; .faded40;}
+	}
+
 	.add-film .poster{ background:@ocre; color:@black;  color:fade(@black, 50%); .anchor; .anim;
 		&:hover{ color:black; .anim; }
 		.plus{ .fs(120px); padding-top:60px; }
@@ -46,40 +60,47 @@ body, html{ margin:0; padding:0; .brandon; color:@black }
 
 section{ margin:36px 0; }
 
-footer{ margin:20px 0 0; padding:30px 0; background:#322D29; .tcenter; color:white;
+footer{ margin:70px 0 0; padding:30px 0; background:#322D29; .tcenter; color:white;
 	* > { .faded60; }
 	a{ text-decoration:none; color:white;
 		&:hover{ .op(1); }
 	}
 }
 
-.film{ width:217px; .tcenter; .fs(20px); .bold; 
-	.poster{ margin-bottom:8px;}
-	.title{  .h2; text-transform:inherit; }
-	.date{ .h3; .faded40;}
+
+//Components
+.poster{ width:217px; height:320px; background-size:cover; background-repeat:no-repeat; background-position:center center; .br(3px); }
+
+
+
+.play-icon{ @size:36px; width:@size; height:@size; background:fade(white, 20%); border:2px solid white; .br(50%); justify-content:center; align-items:center; .flex; margin-right:8px;
+	.triangle{ @height:@size/4-2; @width:@size/3; width:0; height:0; border-top:@height solid transparent; border-bottom: @height solid transparent; border-left: @width solid white; .rel; left:1px; }
+}
+
+iframe{ .rel; .bs(0 0 20px 0 black); }
+
+// buttons
+.button{ padding:15px 22px; background:@green !important; .br(3px); display:inline-block; .h2; }
+.black-button{ background:@black !important; color:white !important; }
+
+.close-button{ @size:32px; width:@size; height:@size; .flex; .center;  .abs; right:-@size/2; top:-@size/2; background:fade(white, 70%); border:2px solid black; font-family:arial; .fs(24px); color:black; .bold; .br(50%); z-index:9999; .anchor; .bs(0 0 20px 0 black);
+	&:hover{ background:white;}
 }
 
 
-.poster{ width:217px; height:320px; background-size:cover; background-repeat:no-repeat; .br(3px); }
-
-
-
-.button{ padding:15px 22px; background:@green !important; .br(3px); display:inline-block; .h2; text-decoration:none; color:white; }
-.black-button{ background:@black !important; color:white !important; }
-
-
-h3{ .tcenter; .h1; }
-
+// Styles
 
 @green:#00CE4B;
 @black:#2B2A27;
 @ocre:#FFD62C;
 
+a{ text-decoration:none; color:inherit;}
 
 .h1{ .fs(36px); .bold;}
 .h2{ .fs(16px); .bold; .upcase;}
 .h3{ .fs(16px); .regular;  .fs(16px, 1.3em); .faded60;}
 
+h3{ .tcenter; .h1; }
 .light{ font-weight:300; }
 .regular{ font-weight:400; }
 .bold{ font-weight:600; }
