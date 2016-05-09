@@ -1,0 +1,71 @@
+@import "style-global.less";
+//@import "flexboxgrid.min.css";
+@import "fonts.less";
+
+body, html{ margin:0; padding:0; .brandon; color:@black }
+
+.top{ padding:20px 0; background-size:cover; background-repeat:no-repeat; .rel; color: white; .textOnImage; }
+	.scrim{ .cover-all; background:fade(black,60%); }
+	.header{ .rel; }
+	.featured{ .rel;
+		.film-title{ .h1; }
+		.poster{ .bs(0 0 20px 0 black); }
+		.desc{ max-width:360px; .fs(16px, 1.3em); .faded60; .light; }
+
+		.ratings{ .fs(16px); 
+			.title{ .faded60; .upcase; }
+			.value{ .bold; }
+		}
+
+		.meta{ .h2; .tcenter;
+			.date{ .h1;}
+			.time{}
+		}
+	}
+
+.play-icon{ @size:36px; width:@size; height:@size; background:fade(white, 20%); border:2px solid white; .br(50%); justify-content:center; align-items:center; .flex;
+	.triangle{ @height:@size/4-2; @width:@size/3; width:0; height:0; border-top:@height solid transparent; border-bottom: @height solid transparent; border-left: @width solid white; .rel; left:1px; }
+}
+
+.film{ .tcenter; .fs(20px); .bold; 
+	.poster{ margin-bottom:8px;}
+	.title{  }
+	.date{ .faded40;}
+}
+
+.poster{ width:217px; height:320px; background-size:cover; background-repeat:no-repeat; .br(3px); }
+
+
+input{ padding:15px 22px; .fs(18px); .br(3px); border:0; background-color:darken(white, 5%); }
+
+.button{ padding:15px 22px; background:@green; .br(3px); display:inline-block; .fs(18px); .bold; .upcase;}
+.black-button{ background:@black; color:white; }
+
+
+h3{ .tcenter; }
+
+@green:#00CE4B;
+@black:#2B2A27;
+
+
+.h1{ .fs(36px); .bold;}
+.h2{ .fs(24px); .light;}
+
+.light{ font-weight:300; }
+.regular{ font-weight:400; }
+.bold{ font-weight:600; }
+
+.textOnImage{ .ts(0px 0px 3px fade(black, 40%)); }
+
+
+.faded40{ .op(0.4); }
+.faded60{ .op(0.6); }
+.brandon{ font-family:'Brandon Grotesque'}
+
+
+
+.flex{ display:flex; }
+.row{ .flex; flex-direction:row; }
+.column{ .flex; flex-direction:column; }
+.center{ align-items:center; justify-content:center;}
+.space-between{ justify-content:space-between;}
