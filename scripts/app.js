@@ -10,7 +10,8 @@
       openVideoModal();
     }
     $('body').on('click', '.openVideoModal', openVideoModal);
-    return $('body').on('click', '.closeVideoModal', closeVideoModal);
+    $('body').on('click', '.closeVideoModal', closeVideoModal);
+    return $(".desc").dotdotdot();
   });
 
   showSubscribedAlert = function() {
@@ -27,7 +28,7 @@
     $('.videoIframe').height($('.videoIframe').width() * 0.5625);
     $('.inner-overlay').css('position', 'relative');
     $('.inner-overlay').css('left', $('body').outerWidth() / 8);
-    return $('.inner-overlay').css('top', $('body').outerHeight() / 16);
+    return $('.inner-overlay').css('top', $('body').outerHeight() / 2 - $('.videoIframe').height() + $('.videoIframe').height() / 2);
   };
 
   closeVideoModal = function() {
