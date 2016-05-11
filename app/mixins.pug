@@ -1,0 +1,23 @@
+mixin film(title, date, link, image_link )
+  a.film(href=link, title='"'+title+'" — Education Documentary Screening')
+    .poster-container
+      img.poster(src="images/"+image_link+".jpg")
+    .title= title
+    .date= date
+
+
+mixin eventDate(eventDate)
+  <span class="addtocalendar">
+    <a class="atcb-link">June 1st, 7-9PM</a>
+    <var class="atc_event">
+      <var class="atc_date_start">2016-06-01 19:00:00</var>
+      <var class="atc_date_end">2016-06-01 21:00:00</var>
+      <var class="atc_timezone">America/Los_Angeles</var>
+      <var class="atc_title">"To Be and to Have" — Education Documentary Screening</var>
+      <var class="atc_description">Join us for the second screening of another Education Documentary at The Roxie Theater</var>
+      <var class="atc_location">Roxie Theater</var>
+      <var class="atc_organizer">Bernat Fortet</var>
+      <var class="atc_organizer_email">contact@ed-films.com</var>
+    </var>
+  </span>
+

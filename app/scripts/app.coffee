@@ -9,6 +9,8 @@ $(document).ready( ->
 
   $('body').on('click', '.openVideoModal', openVideoModal )
   $('body').on('click', '.closeVideoModal', closeVideoModal )
+
+  $(".desc").dotdotdot()
 )
 	
 
@@ -36,7 +38,7 @@ openVideoModal = ->
   $('.videoIframe').height $('.videoIframe').width() * 0.5625
   $('.inner-overlay').css 'position', 'relative'
   $('.inner-overlay').css 'left', $('body').outerWidth() / 8
-  $('.inner-overlay').css 'top', $('body').outerHeight() / 16
+  $('.inner-overlay').css 'top', $('body').outerHeight()/2 - $('.videoIframe').height() + $('.videoIframe').height()/2
 
 
 closeVideoModal = ->
