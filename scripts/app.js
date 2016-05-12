@@ -10,8 +10,7 @@
       openVideoModal();
     }
     $('body').on('click', '.openVideoModal', openVideoModal);
-    $('body').on('click', '.closeVideoModal', closeVideoModal);
-    return $(".desc").dotdotdot();
+    return $('body').on('click', '.closeVideoModal', closeVideoModal);
   });
 
   showSubscribedAlert = function() {
