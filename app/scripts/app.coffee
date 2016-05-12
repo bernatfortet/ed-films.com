@@ -10,7 +10,7 @@ $(document).ready( ->
   $('body').on('click', '.openVideoModal', openVideoModal )
   $('body').on('click', '.closeVideoModal', closeVideoModal )
 
-  $(".desc").dotdotdot()
+
 )
 	
 

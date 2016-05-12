@@ -28,7 +28,6 @@ html(lange="en")
 						.bold.faded60.upcase Next Screening
 						.film-title To Be and To Have
 						.screening-info.row
-							//http://addtocalendar.com/
 							.date.row.center
 								.icon
 									<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -43,7 +42,8 @@ html(lange="en")
 										<path d="M0 0h24v24H0z" fill="none"/>
 									</svg>
 								span Roxie Theater
-						p.desc In rural France, schoolteacher Georges Lopez educates 12 children, whose ages range from 4 to 11 years old. Over the course of a year, the soon-to-retire Lopez instructs them all in one small classroom with the traditional tools of French teaching: rote repetition and the dictation of literary passages for copying. As the seasons pass, Lopez must keep his students disciplined while preparing the older children for the exams that will determine their educational future.
+						.desc In rural France, schoolteacher Georges Lopez educates 12 children, whose ages range from 4 to 11 years old. Over the course of a year, the soon-to-retire Lopez instructs them all in one small classroom with the traditional tools of French teaching.
+
 						.ratings.row.space-around
 							.imdb.center.flex.column
 								.value 7.9
@@ -100,7 +100,9 @@ html(lange="en")
 
 		#Scripts
 			script( src="scripts/lib/jquery.min.js" )
-			script( src="scripts/lib/jquery.dotdotdot.min.js" )
+			style
+				.desc { widow-adjust: padding-right; }
+			script( src="scripts/lib/type.js" )
 			script( src="scripts/app.js", type"text/javascript")
 
 

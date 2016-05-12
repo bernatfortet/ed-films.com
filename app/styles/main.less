@@ -23,7 +23,14 @@ section{ margin:48px 0; }
 		.poster-container{ width:36%; margin-right:32px; align-self:flex-start; }
 			.poster{ width:100%; height:auto; .bs(0 0 20px 0 black); .rel; left:0.5rem; .br(3px); }
 		.film-title{ .h1; margin:8px 0 12px; }
-		.desc{ max-width:302px; height:230px; .h3; margin:0 0 12px 0; }
+
+
+		//.desc-container{ }
+		.desc{ max-width:302px; margin:0 0 28px 0;
+			p{ .h3; .op(1); color:fade(white, 60%) }
+			.read-more{ color:white; }
+		}
+		//.more{ .abs; right:0; bottom:0; }
 
 		.screening-info{ margin-bottom:12px; .h2; text-transform:inherit; .regular; 
 			.icon{ margin-right:8px; }
@@ -144,6 +151,12 @@ h3{ .tcenter; .h1; }
 
 .textOnImage{ .ts(0px 0px 3px fade(black, 40%)); }
 
+/*****************
+Flexbox helpers
+******************/
+
+.truncate{ width:250px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+
 
 /*****************
 Flexbox helpers
@@ -171,12 +184,18 @@ Media Queries
 	.top{ padding-bottom:20px;}
 	.logo{ margin:0 auto; left:0; padding-right:0; }
 	.featured{ flex-direction:column; .center; .tcenter;
-		.poster-container{ width:48%; margin-bottom:24px; align-self:center; }
+		.poster-container{ width:60%; margin-bottom:24px; align-self:center; margin-right:0; }
+		.poster{ left:0; }
 		.movie-info{ .center; .column; }
-		.desc{ max-width:360px; height:120px; }
+		.desc{ max-width:360px; margin-bottom:12px; }
 		.ratings{ display:none; }
+		.button{ margin-top:0; }
 	}
-	.screening-info{ .center; }
+	.screening-info{ .center; .center;
+		.location{ margin-left:8px; }
+		> * { padding:8px 2px !important; width:140px; }
+	}
+
 	.meta{ flex-direction:row; .center;}
 
 	.subscribe{
@@ -193,7 +212,6 @@ Media Queries
 	.logo{ margin:0 auto; left:0; padding-right:0; }
 	.featured{ flex-direction:column; .center;
 		.movie-info{ .center; }
-		.desc{ max-height:202px; }
 	}
 	.meta{ flex-direction:row; .center;}
 
