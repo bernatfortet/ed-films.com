@@ -14,7 +14,10 @@
   });
 
   showSubscribedAlert = function() {
-    return alert('Subscribed');
+    $('.alert').show();
+    return setTimout(function() {
+      return $('.alert').hide();
+    }, 5000);
   };
 
   openVideoModal = function() {
