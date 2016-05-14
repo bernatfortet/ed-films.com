@@ -1,5 +1,5 @@
 (function() {
-  var closeVideoModal, showModal, showSubscribedAlert;
+  var closeVideoModal, openVideoModal, showModal, showSubscribedAlert;
 
   $(document).ready(function() {
     var hash;
@@ -12,11 +12,7 @@
     $('body').on('click', '.openEventbriteModal', function() {
       return showModal('eventbriteIframe');
     });
-    $('body').on('click', '.openVideoModal', function() {
-      showModal('videoIframe');
-      $('.videoIframe').height($('.videoIframe').width() * 0.5625);
-      return $(".videoIframe")[0].src += "&autoplay=1";
-    });
+    $('body').on('click', '.openVideoModal', openVideoModal);
     return $('body').on('click', '.closeVideoModal', closeVideoModal);
   });
 
@@ -30,6 +26,12 @@
   showModal = function(iframe) {
     $('.overlay').css('display', 'flex');
     return $('.' + iframe).show();
+  };
+
+  openVideoModal = function() {
+    showModal('videoIframe');
+    $('.videoIframe').height($('.videoIframe').width() * 0.5625);
+    return $(".videoIframe")[0].src += "&autoplay=1";
   };
 
   closeVideoModal = function() {
