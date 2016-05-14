@@ -1,3 +1,4 @@
+@import "atc-style-blue.css";
 article,
 aside,
 details,
@@ -291,29 +292,29 @@ input::-moz-focus-inner {
 }
 @font-face {
   font-family: 'Brandon Grotesque';
-  src: url(assets/fonts/brandon-grotesque/brandongrotesque-regular.eot);
-  src: url(assets/fonts/brandon-grotesque/brandongrotesque-regular.eot?#iefix) format("embedded-opentype"), url(assets/fonts/brandon-grotesque/brandongrotesque-regular.woff) format("woff"), url(assets/fonts/brandon-grotesque/brandongrotesque-regular.ttf) format("truetype"), url(assets/fonts/brandon-grotesque/brandongrotesque-regular.svg#BrandonGrotesqueRegular) format("svg");
+  src: url(fonts/brandongrotesque-regular.eot);
+  src: url(fonts/brandongrotesque-regular.eot?#iefix) format("embedded-opentype"), url(fonts/brandongrotesque-regular.woff) format("woff"), url(fonts/brandongrotesque-regular.ttf) format("truetype"), url(fonts/brandongrotesque-regular.svg#BrandonGrotesqueRegular) format("svg");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'Brandon Grotesque';
-  src: url(assets/fonts/brandon-grotesque/brandongrotesque-light.eot);
-  src: url(assets/fonts/brandon-grotesque/brandongrotesque-light.eot?#iefix) format("embedded-opentype"), url(assets/fonts/brandon-grotesque/brandongrotesque-light.woff) format("woff"), url(assets/fonts/brandon-grotesque/brandongrotesque-light.ttf) format("truetype"), url(assets/fonts/brandon-grotesque/brandongrotesque-light.svg#BrandonGrotesqueLight) format("svg");
+  src: url(fonts/brandongrotesque-light.eot);
+  src: url(fonts/brandongrotesque-light.eot?#iefix) format("embedded-opentype"), url(fonts/brandongrotesque-light.woff) format("woff"), url(fonts/brandongrotesque-light.ttf) format("truetype"), url(fonts/brandongrotesque-light.svg#BrandonGrotesqueLight) format("svg");
   font-weight: 200;
   font-style: normal;
 }
 @font-face {
   font-family: 'Brandon Grotesque';
-  src: url(assets/fonts/brandon-grotesque/brandongrotesque-bold.eot);
-  src: url(assets/fonts/brandon-grotesque/brandongrotesque-bold.eot?#iefix) format("embedded-opentype"), url(assets/fonts/brandon-grotesque/brandongrotesque-bold.woff) format("woff"), url(assets/fonts/brandon-grotesque/brandongrotesque-bold.ttf) format("truetype"), url(assets/fonts/brandon-grotesque/brandongrotesque-bold.svg#BrandonGrotesqueBold) format("svg");
+  src: url(fonts/brandongrotesque-bold.eot);
+  src: url(fonts/brandongrotesque-bold.eot?#iefix) format("embedded-opentype"), url(fonts/brandongrotesque-bold.woff) format("woff"), url(fonts/brandongrotesque-bold.ttf) format("truetype"), url(fonts/brandongrotesque-bold.svg#BrandonGrotesqueBold) format("svg");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: 'Brandon Grotesque';
-  src: url(assets/fonts/brandon-grotesque/brandongrotesque-black.eot);
-  src: url(assets/fonts/brandon-grotesque/brandongrotesque-black.eot?#iefix) format("embedded-opentype"), url(assets/fonts/brandon-grotesque/brandongrotesque-black.woff) format("woff"), url(assets/fonts/brandon-grotesque/brandongrotesque-black.ttf) format("truetype"), url(assets/fonts/brandon-grotesque/brandongrotesque-black.svg#BrandonGrotesqueBlack) format("svg");
+  src: url(fonts/brandongrotesque-black.eot);
+  src: url(fonts/brandongrotesque-black.eot?#iefix) format("embedded-opentype"), url(fonts/brandongrotesque-black.woff) format("woff"), url(fonts/brandongrotesque-black.ttf) format("truetype"), url(fonts/brandongrotesque-black.svg#BrandonGrotesqueBlack) format("svg");
   font-weight: 900;
   font-style: normal;
 }
@@ -375,7 +376,7 @@ section {
   padding: 0 2%;
 }
 .featured .poster-container {
-  width: 36%;
+  width: 240px;
   margin-right: 32px;
   align-self: flex-start;
 }
@@ -442,12 +443,13 @@ section {
   height: 20px;
   fill: currentColor;
 }
-.featured .screening-info > * {
-  padding: 8px 12px;
+.featured .screening-info a {
+  padding: 9px 8px 8px;
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
 .featured .screening-info > *:hover {
   background: white;
@@ -455,6 +457,32 @@ section {
   -webkit-text-shadow: none;
   -moz-text-shadow: none;
   text-shadow: none;
+}
+.featured .screening-info .addtocalendar {
+  max-width: 200px;
+  max-height: 50px;
+}
+.featured .screening-info .atcb-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.featured .screening-info .atcb-list {
+  width: 157px;
+  margin: 3px 0 0 0;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  color: rgba(0, 0, 0, 0.7);
+  -webkit-text-shadow: none;
+  -moz-text-shadow: none;
+  text-shadow: none;
+  overflow: hidden;
+}
+.featured .screening-info .atcb-list li:hover {
+  color: black;
+  background: #FFD62C;
 }
 .featured .location {
   margin-left: 20px;
@@ -487,31 +515,6 @@ section {
   -webkit-text-shadow: none;
   -moz-text-shadow: none;
   text-shadow: none;
-}
-.featured .atcb-list {
-  width: 157px;
-  margin: 13px 0 0 -41px;
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  color: rgba(0, 0, 0, 0.7);
-  -webkit-text-shadow: none;
-  -moz-text-shadow: none;
-  text-shadow: none;
-  overflow: hidden;
-}
-.featured .atcb-list li {
-  padding: 8px 10px;
-}
-.featured .atcb-list li:first-child {
-  padding-top: 12px;
-}
-.featured .atcb-list li:last-child {
-  padding-top: 12px;
-}
-.featured .atcb-list li:hover {
-  color: black;
-  background: #FFD62C;
 }
 .screenings {
   max-width: 820px;
@@ -743,7 +746,11 @@ footer a:hover {
 }
 .overlay .inner-overlay {
   width: 90%;
+  max-width: 800px;
   position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 .overlay iframe {
   position: relative;
@@ -757,6 +764,7 @@ footer a:hover {
 }
 .eventbriteIframe {
   background: white;
+  max-width: 800px;
 }
 .alert {
   padding: 16px 0;
@@ -946,10 +954,10 @@ Flexbox helpers
   align-self: center;
 }
 .self-start {
-  align-self: start;
+  align-self: flex-start;
 }
 .self-end {
-  align-self: end;
+  align-self: flex-end;
 }
 .flex1 {
   display: flex;
@@ -958,7 +966,7 @@ Flexbox helpers
 /*****************
 Media Queries
 ******************/
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .top {
     padding-bottom: 20px;
   }
@@ -983,13 +991,15 @@ Media Queries
     left: 0;
   }
   .featured .movie-info {
-    align-items: center;
-    justify-content: center;
     display: flex;
     flex-direction: column;
   }
+  .featured .movie-meta {
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  }
   .featured .desc {
-    max-width: 360px;
     margin-bottom: 12px;
   }
   .featured .ratings {
@@ -1005,15 +1015,6 @@ Media Queries
   .screening-info .location {
     margin-left: 8px;
   }
-  .screening-info > * {
-    padding: 8px 2px !important;
-    width: 140px;
-  }
-  .meta {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
   .subscribe .inner {
     padding: 0px 20px 30px;
   }
@@ -1025,7 +1026,7 @@ Media Queries
     margin-top: 12px;
   }
 }
-@media (min-width: 600px) and (max-width: 800px) {
+@media (min-width: 650px) and (max-width: 800px) {
   .logo {
     margin: 0 auto;
     left: 0;
@@ -1040,23 +1041,18 @@ Media Queries
     align-items: center;
     justify-content: center;
   }
-  .meta {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
   .subscribe .inner {
     padding-left: 40px;
     padding-right: 40px;
   }
 }
 /* Change movies column counts */
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .screenings .film {
     width: 50%;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .screenings .film {
     width: 33.3333%;
   }

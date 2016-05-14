@@ -15,10 +15,14 @@
     $('body').on('click', '.openVideoModal', function() {
       showModal('videoIframe');
       $('.videoIframe').height($('.videoIframe').width() * 0.5625);
-      return callPlayer('YoutubeIframe', 'playVideo');
+      return $('.videoIframe').tube();
     });
     $('body').on('click', '.closeVideoModal', closeVideoModal);
-    return callPlayer('YoutubeIframe', 'playVideo');
+    return $('.videoIframe').player({
+      video: 'S49qvE86Qs0',
+      width: '100%',
+      height: '100%'
+    });
   });
 
   showSubscribedAlert = function() {
@@ -34,7 +38,8 @@
   };
 
   closeVideoModal = function() {
-    return $('.overlay').hide();
+    $('.overlay').hide();
+    return $('iframe').hide();
   };
 
   callPlayer = function(frame_id, func, args) {
