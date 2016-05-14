@@ -1,5 +1,5 @@
 (function() {
-  var closeVideoModal, openVideoModal, showModal, showSubscribedAlert;
+  var closeVideoModal, openTicketsModal, openVideoModal, showModal, showSubscribedAlert;
 
   $(document).ready(function() {
     var hash;
@@ -8,10 +8,10 @@
       showSubscribedAlert();
     } else if (hash === '#trailer') {
       openVideoModal();
+    } else if (hash === '#tickets') {
+      openTicketsModal();
     }
-    $('body').on('click', '.openEventbriteModal', function() {
-      return showModal('eventbriteIframe');
-    });
+    $('body').on('click', '.openEventbriteModal', openTicketsModal);
     $('body').on('click', '.openVideoModal', openVideoModal);
     return $('body').on('click', '.closeVideoModal', closeVideoModal);
   });
@@ -26,6 +26,10 @@
   showModal = function(iframe) {
     $('.overlay').css('display', 'flex');
     return $('.' + iframe).show();
+  };
+
+  openTicketsModal = function() {
+    return showModal('eventbriteIframe');
   };
 
   openVideoModal = function() {
