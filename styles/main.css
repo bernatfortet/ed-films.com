@@ -739,15 +739,24 @@ footer a:hover {
   left: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  display: none;
 }
 .overlay .inner-overlay {
   width: 90%;
+  position: relative;
 }
 .overlay iframe {
   position: relative;
   -webkit-box-shadow: 0 0 20px 0 black;
   -moz-box-shadow: 0 0 20px 0 black;
   box-shadow: 0 0 20px 0 black;
+  display: none;
+}
+.overlay .eventbrite-iframe {
+  height: 90px;
+}
+.eventbriteIframe {
+  background: white;
 }
 .alert {
   padding: 16px 0;
