@@ -96,7 +96,13 @@ footer{ margin:70px 0 0; padding:30px 0; background:#322D29; .tcenter; color:whi
 	.triangle{ @height:@size/4-2; @width:@size/3; width:0; height:0; border-top:@height solid transparent; border-bottom: @height solid transparent; border-left: @width solid white; .rel; left:1px; }
 }
 
-iframe{ .rel; .bs(0 0 20px 0 black); }
+
+.overlay{ .flex; .center; width:100%; height:100%; position:fixed; left:0; top:0; background-color:rgba(0,0,0,0.5);
+	.inner-overlay{ width:90%;}
+		iframe{ .rel; .bs(0 0 20px 0 black); }
+}
+
+.alert{ padding:16px 0; background:@ocre; .tcenter;}
 
 // buttons
 
@@ -199,7 +205,7 @@ Media Queries
 	.meta{ flex-direction:row; .center;}
 
 	.subscribe{
-		.inner{ padding:0px 30px 30px; }
+		.inner{ padding:0px 20px 30px; }
 		form{ .column;
 			.button{ margin-top:12px; }
 		}

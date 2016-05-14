@@ -11,11 +11,34 @@ $(document).ready( ->
   $('body').on('click', '.closeVideoModal', closeVideoModal )
 
 
+  $('body').on('click', '.openEventbriteModal', openEventbriteModal )
+
+
 )
 	
 
 showSubscribedAlert = ->
-  alert('Subscribed')
+  $('.alert').show()
+  setTimout( ->
+    $('.alert').hide()
+  , 5000)
+
+
+appendModal = (iframe, padding) ->
+  $('body').append '
+    <div class="overlay closeVideoModal">
+      
+      <div class="inner-overlay modalIframe" style="position:relative; left:0; top:10px; z-index:999999;">
+        <div class="close-button closeVideoModal">×</div>
+        '+iframe+'
+      </div>
+    </div>'
+
+  #$('.inner-overlay').width $('body').outerWidth() - ($('body').outerWidth() / padding)
+  #$('.inner-overlay').height $('.modalIframe').width() * 0.5625
+  #$('.inner-overlay').css 'position', 'relative'
+  #$('.inner-overlay').css 'left', $('body').outerWidth() / 8
+  #$('.inner-overlay').css 'top', $('body').outerHeight()/2 - $('.modalIframe').height() + $('.modalIframe').height()/2
 
 
 openVideoModal = ->
@@ -39,6 +62,12 @@ openVideoModal = ->
   $('.inner-overlay').css 'position', 'relative'
   $('.inner-overlay').css 'left', $('body').outerWidth() / 8
   $('.inner-overlay').css 'top', $('body').outerHeight()/2 - $('.videoIframe').height() + $('.videoIframe').height()/2
+
+
+openEventbriteModal = ->
+
+  iframe = '<iframe  src="//eventbrite.com/tickets-external?eid=25277609009&ref=etckt" frameborder="0" height="247" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe>'
+  appendModal( iframe )
 
 
 closeVideoModal = ->
