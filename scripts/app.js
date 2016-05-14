@@ -23,6 +23,19 @@
       width: '100%',
       height: '100%'
     });
+
+    /*
+    player = new (YT.Player)($('.videoIframe')[0],
+      height: '100%'
+      width: '100%'
+      videoId: 'S49qvE86Qs0'
+      events:
+        'onReady': ->
+          console.log 'onRead'
+        'onStateChange': ->
+          console.log 'on state change'
+          )
+     */
   });
 
   showSubscribedAlert = function() {
