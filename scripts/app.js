@@ -18,9 +18,9 @@
 
   showSubscribedAlert = function() {
     $('.alert').show();
-    return setTimout(function() {
+    return setTimeout(function() {
       return $('.alert').hide();
-    }, 5000);
+    }, 4000);
   };
 
   showModal = function(iframe) {
