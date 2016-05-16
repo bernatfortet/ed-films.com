@@ -797,6 +797,9 @@ footer a:hover {
   justify-content: center;
   cursor: pointer;
 }
+.button:hover {
+  background: #006826;
+}
 .button .icon {
   margin-right: 8px;
 }
